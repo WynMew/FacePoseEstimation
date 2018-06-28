@@ -129,8 +129,8 @@ int main()
                 // Project a 3D point (0, 0, 1000.0) onto the image plane.
                 // We use this to draw a line sticking out of the nose
 
-                cv::vector<cv::Point3d> nose_end_point3D;
-                cv::vector<cv::Point2d> nose_end_point2D;
+                std::vector<cv::Point3d> nose_end_point3D;
+                std::vector<cv::Point2d> nose_end_point2D;
                 nose_end_point3D.push_back(cv::Point3d(0,0,1000.0));
 
                 projectPoints(nose_end_point3D, rotation_vector, translation_vector, camera_matrix, dist_coeffs, nose_end_point2D);
